@@ -1,7 +1,7 @@
 ### version 1
 
 - [x] crud article
-- [ ] crud course
+- [x] crud course
 - [ ] crud episode
 
 # Table: article
