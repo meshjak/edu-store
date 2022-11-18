@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Admin\ArticleController;
 use App\Http\Controllers\Admin\CourseController;
+use App\Http\Controllers\Admin\EpisodeController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -25,6 +26,16 @@ Route::name('admin.')->prefix('admin')->group(function () {
             Route::post('/', 'store')->name('store');
             Route::patch('/{course}', 'update')->name('update');
             Route::delete('/{course}', 'destroy')->name('destroy');
+        });
+
+    Route::name('episodes.')
+        ->controller(EpisodeController::class)
+        ->prefix('episodes')->group(function() {
+            Route::get('/', 'index')->name('index');
+            Route::get('/{episode}', 'show')->name('show');
+            Route::post('/', 'store')->name('store');
+            Route::patch('/{episode}', 'update')->name('update');
+            Route::delete('/{episode}', 'destroy')->name('destroy');
         });
 });
 
