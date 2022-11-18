@@ -1,6 +1,6 @@
 ### version 1
 
-- [ ] crud article
+- [x] crud article
 - [ ] crud course
 - [ ] crud episode
 
@@ -19,7 +19,7 @@
 | description  | text               | `true`     |           |                      |
 | body         | text               | `true`     |           |                      |
 | imageUrl     | varchar(100)       | `true`     |           |                      |
-| tags         | array              | `false`    |           |                      |
+| tags         | array              | `true`     |           |                      |
 | viewCount    | int                | `false`    |     0     |                      |
 | commentCount | int                | `false`    |     0     |                      |
 
