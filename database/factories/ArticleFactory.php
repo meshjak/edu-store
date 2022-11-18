@@ -20,7 +20,7 @@ class ArticleFactory extends Factory
             'image_url' => $this->faker->imageUrl,
             'tags' => ['php', 'laravel'],
             'view_count' => 10,
-            'comment_count' => 5
+            'comment_count' => 5,
         ];
     }
 }

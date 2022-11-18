@@ -4,7 +4,6 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Models\Article;
-use App\Models\User;
 
 class ArticleController extends Controller
 {
@@ -22,16 +21,18 @@ class ArticleController extends Controller
     {
         $data = request()->all();
         $article = Article::create($data);
+
         return response()->json([
-            'data' => $article
+            'data' => $article,
         ]);
     }
 
     public function update(Article $article)
     {
         $article->update(request()->all());
+
         return response()->json([
-            'data' => $this->show($article)
+            'data' => $this->show($article),
         ]);
     }
 

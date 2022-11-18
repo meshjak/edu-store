@@ -42,7 +42,7 @@ class ArticleTest extends TestCase
     {
         $article = Article::factory()->for(User::factory())->create();
         $route = route('admin.articles.update', $article->id);
-        $this->patchJson($route, ['title' => "hi"])->assertOk();
+        $this->patchJson($route, ['title' => 'hi'])->assertOk();
     }
 
     public function test_destroy_article()

@@ -24,7 +24,7 @@ return new class extends Migration
             $table->string('video_url', 100)->nullable();
             $table->json('tags')->nullable();
             $table->string('price')->default(0);
-            $table->time('time')->default("00:00:00");
+            $table->time('time')->default('00:00:00');
             $table->unsignedBigInteger('view_count')->default(0);
             $table->unsignedBigInteger('comment_count')->default(0);
             $table->unsignedInteger('number')->default(0);

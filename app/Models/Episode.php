@@ -22,14 +22,13 @@ class Episode extends Model
         'time',
         'view_count',
         'comment_count',
-        'number'
+        'number',
     ];
 
     protected $casts = [
         'tags' => 'array',
-        'price' => 'integer'
+        'price' => 'integer',
     ];
-
 
     public function course()
     {

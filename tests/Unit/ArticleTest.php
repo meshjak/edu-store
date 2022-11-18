@@ -2,9 +2,9 @@
 
 namespace Tests\Unit;
 
+use App\Http\Controllers\Admin\ArticleController;
 use App\Models\Article;
 use PHPUnit\Framework\TestCase;
-use App\Http\Controllers\Admin\ArticleController;
 
 class ArticleTest extends TestCase
 {

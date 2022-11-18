@@ -26,7 +26,7 @@ class CourseFactory extends Factory
             'price' => $this->faker->numberBetween(2_000_000, 10_000_000),
             'time' => $this->faker->time,
             'view_count' => 10,
-            'comment_count' => 5
+            'comment_count' => 5,
         ];
     }
 }

@@ -2,8 +2,8 @@
 
 namespace Tests\Feature;
 
-use App\Models\Episode;
 use App\Models\Course;
+use App\Models\Episode;
 use App\Models\User;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Foundation\Testing\WithFaker;
@@ -43,7 +43,7 @@ class EpisodeTest extends TestCase
     {
         $episode = Episode::factory()->for(Course::factory()->for(User::factory()))->create();
         $route = route('admin.episodes.update', $episode->id);
-        $this->patchJson($route, ['title' => "hi"])->assertOk();
+        $this->patchJson($route, ['title' => 'hi'])->assertOk();
     }
 
     public function test_destroy_episode()

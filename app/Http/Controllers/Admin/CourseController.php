@@ -3,7 +3,6 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
-use App\Models\Article;
 use App\Models\Course;
 
 class CourseController extends Controller
@@ -22,14 +21,16 @@ class CourseController extends Controller
     {
         $data = request()->all();
         $course = Course::create($data);
+
         return response()->json([
-            'data' => $course
+            'data' => $course,
         ]);
     }
 
     public function update(Course $course)
     {
         $course->update(request()->all());
+
         return $this->show($course)->getOriginalContent();
     }
 

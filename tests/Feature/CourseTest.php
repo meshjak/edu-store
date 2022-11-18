@@ -42,7 +42,7 @@ class CourseTest extends TestCase
     {
         $course = Course::factory()->for(User::factory())->create();
         $route = route('admin.courses.update', $course->id);
-        $this->patchJson($route, ['title' => "hi"])->assertOk();
+        $this->patchJson($route, ['title' => 'hi'])->assertOk();
     }
 
     public function test_destroy_course()

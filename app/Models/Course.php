@@ -20,14 +20,13 @@ class Course extends Model
         'price',
         'time',
         'view_count',
-        'comment_count'
+        'comment_count',
     ];
 
     protected $casts = [
         'tags' => 'array',
-        'price' => 'integer'
+        'price' => 'integer',
     ];
-
 
     public function user()
     {

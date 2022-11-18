@@ -21,14 +21,16 @@ class EpisodeController extends Controller
     {
         $data = request()->all();
         $episode = Episode::create($data);
+
         return response()->json([
-            'data' => $episode
+            'data' => $episode,
         ]);
     }
 
     public function update(Episode $episode)
     {
         $episode->update(request()->all());
+
         return $this->show($episode)->getOriginalContent();
     }
 

@@ -6,11 +6,10 @@ use App\Http\Controllers\Admin\EpisodeController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
-
 Route::name('admin.')->prefix('admin')->group(function () {
     Route::name('articles.')
         ->controller(ArticleController::class)
-        ->prefix('articles')->group(function() {
+        ->prefix('articles')->group(function () {
             Route::get('/', 'index')->name('index');
             Route::get('/{article}', 'show')->name('show');
             Route::post('/', 'store')->name('store');
@@ -20,7 +19,7 @@ Route::name('admin.')->prefix('admin')->group(function () {
 
     Route::name('courses.')
         ->controller(CourseController::class)
-        ->prefix('courses')->group(function() {
+        ->prefix('courses')->group(function () {
             Route::get('/', 'index')->name('index');
             Route::get('/{course}', 'show')->name('show');
             Route::post('/', 'store')->name('store');
@@ -30,7 +29,7 @@ Route::name('admin.')->prefix('admin')->group(function () {
 
     Route::name('episodes.')
         ->controller(EpisodeController::class)
-        ->prefix('episodes')->group(function() {
+        ->prefix('episodes')->group(function () {
             Route::get('/', 'index')->name('index');
             Route::get('/{episode}', 'show')->name('show');
             Route::post('/', 'store')->name('store');
