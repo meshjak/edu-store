@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\SaveArticleRequest;
 use App\Models\Article;
 
 class ArticleController extends Controller
@@ -17,19 +18,18 @@ class ArticleController extends Controller
         return response()->json(['data' => $article]);
     }
 
-    public function store()
+    public function store(SaveArticleRequest $request)
     {
-        $data = request()->all();
-        $article = Article::create($data);
+        $article = Article::create($request->all());
 
         return response()->json([
             'data' => $article,
         ]);
     }
 
-    public function update(Article $article)
+    public function update(Article $article, SaveArticleRequest $request)
     {
-        $article->update(request()->all());
+        $article->update($request->all());
 
         return response()->json([
             'data' => $this->show($article),
