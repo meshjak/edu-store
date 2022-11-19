@@ -40,7 +40,7 @@
  *              "description": "this is a description for article",
  *              "body": "this is a body for article",
  *              "image_url": "https://via.placeholder.com/640x480.png/00ff99?text=sunt",
- *              "tags": "{'php', 'laravel'}"
+ *              "tags": {"php", "laravel"}
  *         },
  *      )
  */
